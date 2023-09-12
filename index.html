@@ -2,17 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-        <!-- header -->
-        <h1 class="flex h-40 text-3xl font-mono hover:italic items-center justify-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% font-bold text-white opacity-60">Life in the UK Quiz</h1>
-        
+   </head>
 
+<body>   
+    <div class="flex h-48 items-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold text-white opacity-60">
+        <div class="mx-20 space-y-5">
+            <h1 class="text-left text-3xl font-serif">Life in UK Quiz</h1>
+            <p class="text-left font-bold font-serif">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
+</div>
+</div>
+              <!--quiz-->
+        <div class="container mx-20 space-y-5 mt-5">
+            Q1: What did the Chartists campaign for?<hr>
+            <input type="radio" name="question1" id="correct1">The right to vote for the working class<br>
+            <input type="radio" name="question1">The right to vote for the women<br>
+            <input type="radio" name="question1">The right to vote for the 18 year olds<br>
+            <input type="radio" name="question1">The right to vote for the 21 year olds<br>
+            <button class="next" onclick="next(1)">Next</button>
+        </div>
+
+        <div class="container mx-20 space-y-5 mt-5">
+            Q2: Which of the following is part of the UK?<hr>
+            <input type="radio" name="question2">Canada<br>
+            <input type="radio" name="question2"  id="correct2">Wales<br>
+            <input type="radio" name="question2">St Helena<br>
+            <input type="radio" name="question2">Channel Islands<br>
+            <button class="next" onclick="next(2)">Next</button>
+        </div>
+
+        <div class="container mx-20 space-y-5 mt-5">
+            Q3: Which flower is associated with England?<hr>
+            <input type="radio" name="question3">Thistle<br>
+            <input type="radio" name="question3">Shamrock<br>
+            <input type="radio" name="question3">Daffodil<br>
+            <input type="radio" name="question3" id="correct3">Rose<br>
+            <button class="next" onclick="next(3)">Next</button>
+        </div>
+
+        <div class="rounded border-rose-300">
+            <div class="container mx-20 space-y-5 mt-5">
+            Q4: What is not a fundamental principle of British life?<hr>
+            <input type="radio" name="question4">Treating others with fairness<br>
+            <input type="radio" name="question4">Looking after the environment<br>
+            <input type="radio" name="question4" id="correct4">Driving a car<br>
+            <input type="radio" name="question4">Looking after yourself and family<br>
+            <button class="next" onclick="next(4)">Next</button>
+        </div>
+    </div>
+
+        <div class="container mx-20 space-y-5 mt-5">
+            Q5: Which of these is a famous classical music event in the UK?<hr>
+            <input type="radio" name="question5" id="correct5">The Proms<br>
+            <input type="radio" name="question5">T in the Park<br>
+            <input type="radio" name="question5">Creamfields<br>
+            <input type="radio" name="question5">Glastonbury Festival<br>
+            <button onclick="result()">Submit</button>
+        </div>
+ 
+ <script>
+document.getElementByClassName('container')[0].style.display = "block";
+function next(id) {
+    document.getElementByClassName('container')[id-1].style.display = "none";
+    document.getElementByClassName('container')[id].style.display = "block";
+    }
+function result() {
+    var score=0;
+    if (document.getElementById('correct1').checked) {
+        score++;
+    }
+        if (document.getElementById('correct2').checked) {
+        score++;
+        }
+        if (document.getElementById('correct3').checked) {
+        score++;
+        }
+        if (document.getElementById('correct4').checked) {
+        score++;
+        }
+        if (document.getElementById('correct5').checked) {
+        score++;
+    }
+    alert("your score is: "+ score);
+}
+
+</script>
 </body>
 </html>
