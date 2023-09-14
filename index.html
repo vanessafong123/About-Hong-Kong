@@ -3,74 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Project</title>
+    <title>Life in the UK Quiz | Question </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 
    </head>
 
 <body>   
-    <div class="flex h-48 items-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold text-white opacity-60">
-        <div class="mx-20 space-y-5">
-            <h1 class="text-left text-3xl font-serif">Life in UK Quiz</h1>
-            <p class="text-left font-bold font-serif">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
-</div>
-</div>
-              <!--quiz-->
-        <div class="container mx-20 space-y-5 mt-5">
+    <div class="banner">
+        <div class="text-white hover:italic item-center space-y-5 mx-20">
+            <h1 class="flex text-left text-4xl font-bold pt-20">Life in the UK Quiz</h1>
+            <p class="flex text-left font-bold">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
+       </div>
+    </div>
+
+
+    <!--quiz-->
+        <div class="frame space-y-5 text-white pt-6">  
+        <div class="container" id="container1">
             Q1: What did the Chartists campaign for?<hr>
             <input type="radio" name="question1" id="correct1">The right to vote for the working class<br>
             <input type="radio" name="question1">The right to vote for the women<br>
             <input type="radio" name="question1">The right to vote for the 18 year olds<br>
             <input type="radio" name="question1">The right to vote for the 21 year olds<br>
-            <button class="next" onclick="next(1)">Next</button>
+            <button class="next" onclick="next('container1', 'container2')">Next</button>
         </div>
 
-        <div class="container mx-20 space-y-5 mt-5">
+        <div class="container" id="container2">
             Q2: Which of the following is part of the UK?<hr>
             <input type="radio" name="question2">Canada<br>
             <input type="radio" name="question2"  id="correct2">Wales<br>
             <input type="radio" name="question2">St Helena<br>
             <input type="radio" name="question2">Channel Islands<br>
-            <button class="next" onclick="next(2)">Next</button>
+            <button class="next" onclick="next('container2', 'container3')">Next</button>
         </div>
 
-        <div class="container mx-20 space-y-5 mt-5">
+        <div class="container" id="container3">
             Q3: Which flower is associated with England?<hr>
             <input type="radio" name="question3">Thistle<br>
             <input type="radio" name="question3">Shamrock<br>
             <input type="radio" name="question3">Daffodil<br>
             <input type="radio" name="question3" id="correct3">Rose<br>
-            <button class="next" onclick="next(3)">Next</button>
+            <button class="next" onclick="next('container3', 'container4')">Next</button>
         </div>
 
-        <div class="rounded border-rose-300">
-            <div class="container mx-20 space-y-5 mt-5">
+            <div class="container" id="container4">
             Q4: What is not a fundamental principle of British life?<hr>
             <input type="radio" name="question4">Treating others with fairness<br>
             <input type="radio" name="question4">Looking after the environment<br>
             <input type="radio" name="question4" id="correct4">Driving a car<br>
             <input type="radio" name="question4">Looking after yourself and family<br>
-            <button class="next" onclick="next(4)">Next</button>
+            <button class="next" onclick="next('container4', 'container5')">Next</button>
         </div>
-    </div>
 
-        <div class="container mx-20 space-y-5 mt-5">
+        <div class="container" id="container5">
             Q5: Which of these is a famous classical music event in the UK?<hr>
             <input type="radio" name="question5" id="correct5">The Proms<br>
             <input type="radio" name="question5">T in the Park<br>
             <input type="radio" name="question5">Creamfields<br>
             <input type="radio" name="question5">Glastonbury Festival<br>
-            <button onclick="result()">Submit</button>
+            <button class="submit" onclick="result()">Submit</button>
         </div>
- 
- <script>
-document.getElementByClassName('container')[0].style.display = "block";
-function next(id) {
-    document.getElementByClassName('container')[id-1].style.display = "none";
-    document.getElementByClassName('container')[id].style.display = "block";
+    </div>
+
+<script>
+    // <!--display 1st question-->
+    document.getElementsByClassName('container')[0].style.display = "block";
+
+    // <!--next button-->
+    function next(id,id2) {
+        document.getElementsByClassName('container')[id].style.display = "none";
+        document.getElementsByClassName('container')[id2].style.display = "block";
     }
-function result() {
+    //<!--result-->
+    function result() {
     var score=0;
     if (document.getElementById('correct1').checked) {
         score++;
