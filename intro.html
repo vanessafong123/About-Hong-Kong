@@ -3,24 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in the UK Quiz | Question </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Life in the UK Quiz | Home </title>
-</head>
-<body>
-<div class="intro"> 
-    <div id="intro" class="flex-column flex-center text-white text-center hover:italic space-y-5 mx-20">
-            <h1 class="text-4xl font-bold pt-20">Life in the UK Quiz</h1>
-            <p class="font-bold">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
-           <a href="index.html"><button class="mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Start</button></a> 
 
-          
-           <div class="mx-auto flex max-w-screen-sm items-center justify-center">
-            <a href="index.html"><img src="https://th.bing.com/th/id/R.6edd24560c4309afa866d2de4e6d0512?rik=voqP%2fnlBtP221Q&riu=http%3a%2f%2fflaglane.com%2fdownload%2fbritish-flag%2fbritish-flag-graphic.png&ehk=PrPQBDneRt4ppci0xFRPck8twxVXEgKy741WV7QziOc%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="uk flag"></a></div>
-             
+   </head>
+
+<body>   
+    <div class="banner">
+        <div class="text-white hover:italic item-center space-y-5 mx-20">
+            <h1 class="flex text-left text-4xl font-bold pt-20">Life in the UK Quiz</h1>
+            <p class="flex text-left font-bold">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
+       </div>
+    </div>
+
+
+    <!--quiz-->
+        <div class="frame space-y-5 text-white pt-6">  
+        <div class="container" id="container1">
+            Q1: What did the Chartists campaign for?<hr>
+            <input type="radio" name="question1" id="correct1">The right to vote for the working class<br>
+            <input type="radio" name="question1">The right to vote for the women<br>
+            <input type="radio" name="question1">The right to vote for the 18 year olds<br>
+            <input type="radio" name="question1">The right to vote for the 21 year olds<br>
+            <button class="next" onclick="next('container1', 'container2')">Next</button>
         </div>
-        </div> 
+
+        <div class="container" id="container2">
+            Q2: Which of the following is part of the UK?<hr>
+            <input type="radio" name="question2">Canada<br>
+            <input type="radio" name="question2"  id="correct2">Wales<br>
+            <input type="radio" name="question2">St Helena<br>
+            <input type="radio" name="question2">Channel Islands<br>
+            <button class="next" onclick="next('container2', 'container3')">Next</button>
+        </div>
+
+        <div class="container" id="container3">
+            Q3: Which flower is associated with England?<hr>
+            <input type="radio" name="question3">Thistle<br>
+            <input type="radio" name="question3">Shamrock<br>
+            <input type="radio" name="question3">Daffodil<br>
+            <input type="radio" name="question3" id="correct3">Rose<br>
+            <button class="next" onclick="next('container3', 'container4')">Next</button>
+        </div>
+
+            <div class="container" id="container4">
+            Q4: What is not a fundamental principle of British life?<hr>
+            <input type="radio" name="question4">Treating others with fairness<br>
+            <input type="radio" name="question4">Looking after the environment<br>
+            <input type="radio" name="question4" id="correct4">Driving a car<br>
+            <input type="radio" name="question4">Looking after yourself and family<br>
+            <button class="next" onclick="next('container4', 'container5')">Next</button>
+        </div>
+
+        <div class="container" id="container4">
+            Q4: What is not a fundamental principle of British life?<hr>
+            <input type="radio" name="question4">Treating others with fairness<br>
+            <input type="radio" name="question4">Looking after the environment<br>
+            <input type="radio" name="question4" id="correct4">Driving a car<br>
+            <input type="radio" name="question4">Looking after yourself and family<br>
+            <button class="next" onclick="next('container4', 'container5')">Next</button>
+        </div>
+
+        <div class="container" id="container5">
+            Q5: Who was the first Briton to win the Olympic gold medal in the 10,000 meters?<hr>
+            <input type="radio" name="question5" id="correct5">Mo Farah<br>
+            <input type="radio" name="question5">David Weir<br>
+            <input type="radio" name="question5">Bradley Wiggins<br>
+            <input type="radio" name="question5">Sir Chris Hoy<br>
+            <button class="next" onclick="next('container5', 'container6')">Next</button>
+        </div>
+
+        <div class="container" id="container6">
+            Q6: What is the capital of England?<hr>
+            <input type="radio" name="question6">Belfast<br>
+            <input type="radio" name="question6" id="correct6">London<br>
+            <input type="radio" name="question6">Edinburgh<br>
+            <input type="radio" name="question6">Cardiff<br>
+            <button class="next" onclick="next('container6', 'container7')">Next</button>
+        </div>
+
+        <div class="container" id="container7">
+            Q7: Who was Queen Elizabeth II married to?<hr>
+            <input type="radio" name="question7" id="correct7">Prince Philip<br>
+            <input type="radio" name="question7">Prince William<br>
+            <input type="radio" name="question7">King Charles III<br>
+            <input type="radio" name="question7">Prince Harry<br>
+            <button class="next" onclick="next('container7', 'container8')">Next</button>
+        </div>
+
+        <div class="container" id="container8">
+            Q8: When is Christmas Eve?<hr>
+            <input type="radio" name="question8" id="correct8">24th of December<br>
+            <input type="radio" name="question8">25th of December<br>
+            <input type="radio" name="question8">26th of December<br>
+            <input type="radio" name="question8">23rd of December<br>
+            <button class="next" onclick="next('container8', 'container9')">Next</button>
         </div>
         
+        <div class="container" id="container9">
+            Q9: Who built the Tower of London?<hr>
+            <input type="radio" name="question9" id="correct9">William the Conqueror<br>
+            <input type="radio" name="question9">Oliver Cromwell<br>
+            <input type="radio" name="question9">Henry VIII<br>
+            <input type="radio" name="question9">Henry VII<br>
+            <button class="next" onclick="next('container9', 'container10')">Next</button>
+        </div>
+
+        <div class="container" id="container10">
+            Q10: Which charity works to preserve important buildings?<hr>
+            <input type="radio" name="question10" id="correct10">The National Trust<br>
+            <input type="radio" name="question10">NSPCC<br>
+            <input type="radio" name="question10">Age UK<br>
+            <input type="radio" name="question10">The Red Cross<br>
+            <button class="next" onclick="next('container10', 'container11')">Next</button>
+        </div>
+
+        <div class="container" id="container11">
+            Q11: What created the United Kingdom of Great Britain and Ireland?<hr>
+            <input type="radio" name="question11" id="correct11">The Act of Union<br>
+            <input type="radio" name="question11">The Act for the governments<br>
+            <input type="radio" name="question11">The Great governments<br>
+            <input type="radio" name="question11">The Great Union<br>
+            <button class="next" onclick="next('container11', 'container12')">Next</button>
+        </div>
+
+        <div class="container" id="container12">
+            Q12: Which flag has a white cross on a blue background?<hr>
+            <input type="radio" name="question12" id="correct12">Scottish<br>
+            <input type="radio" name="question12">Irish<br>
+            <input type="radio" name="question12">English<br>
+            <input type="radio" name="question12">Welsh<br>
+            <button class="next" onclick="next('container12', 'container13')">Next</button>
+        </div>
+
+        <div class="container" id="container13">
+            Q13: Where was Robert Burns from?<hr>
+            <input type="radio" name="question13">Northern Ireland<br>
+            <input type="radio" name="question13">England<br>
+            <input type="radio" name="question13">Wales<br>
+            <input type="radio" name="question13" id="correct13">Scotland<br>
+            <button class="next" onclick="next('container13', 'container14')">Next</button>
+        </div>
+
+        <div class="container" id="container14">
+            Q14: Roast beef is a traditional food of which country?<hr>
+            <input type="radio" name="question14">Northern Ireland<br>
+            <input type="radio" name="question14"id="correct14">England<br>
+            <input type="radio" name="question14">Wales<br>
+            <input type="radio" name="question14">Scotland<br>
+            <button class="next" onclick="next('container14', 'container15')">Next</button>
+        </div>
+
+        <div class="container" id="container15">
+            Q15: Which of these is a famous classical music event in the UK?<hr>
+            <input type="radio" name="question15" id="correct15">The Proms<br>
+            <input type="radio" name="question15">T in the Park<br>
+            <input type="radio" name="question15">Creamfields<br>
+            <input type="radio" name="question15">Glastonbury Festival<br>
+            <button class="submit" onclick="result()">Submit</button>
+        </div>
+    </div>
+
+<script>
+    // <!--display 1st question-->
+    document.getElementsByClassName('container')[0].style.display = "block";
+
+    // <!--next button-->
+    function next(id,id2) {
+        document.getElementsByClassName('container')[id].style.display = "none";
+        document.getElementsByClassName('container')[id2].style.display = "block";
+    }
+    //<!--result-->
+    function result() {
+    var score=0;
+    if (document.getElementById('correct1').checked) {
+        score++;
+    }
+        if (document.getElementById('correct2').checked) {
+        score++;
+        }
+        if (document.getElementById('correct3').checked) {
+        score++;
+        }
+        if (document.getElementById('correct4').checked) {
+        score++;
+        }
+        if (document.getElementById('correct5').checked) {
+        score++;
+    }
+    if (document.getElementById('correct6').checked) {
+        score++;
+    }
+    if (document.getElementById('correct7').checked) {
+        score++;
+    }if (document.getElementById('correct8').checked) {
+        score++;
+    }
+    if (document.getElementById('correct9').checked) {
+        score++;
+    }
+    if (document.getElementById('correct10').checked) {
+        score++;
+    }
+    if (document.getElementById('correct11').checked) {
+        score++;
+    }
+    if (document.getElementById('correct12').checked) {
+        score++;
+    }
+    if (document.getElementById('correct13').checked) {
+        score++;
+    }
+    if (document.getElementById('correct14').checked) {
+        score++;
+    }
+    if (document.getElementById('correct15').checked) {
+        score++;
+    }
+       alert("your score is: "+ score);
+}
+
+</script>
 </body>
 </html>
