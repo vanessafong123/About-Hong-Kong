@@ -16,8 +16,6 @@
             <p class="flex text-left font-bold">This life in the UK quiz is to familiarise you with the format of the official test. You are advised to study the learning material in the official handbook before attempting the test.</p>
        </div>
     </div>
-
-
     <!--quiz-->
         <div class="frame space-y-5 text-white pt-6">  
         <div class="container" id="container1">
@@ -164,6 +162,9 @@
             <button class="submit" onclick="result()">Submit</button>
         </div>
     </div>
+</div>
+
+</div>
 
 <script>
     // <!--display 1st question-->
@@ -222,6 +223,11 @@
         score++;
     }
        alert("your score is: "+ score);
+}
+reset : () => {
+  quiz.now = 0;
+  quiz.score = 0;
+  quiz.draw();
 }
 
 </script>
